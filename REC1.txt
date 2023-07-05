@@ -1,0 +1,43 @@
+1Q)
+    public static void pattern(int n,int m,boolean flag) {
+        System.out.println(m);
+        if (flag == false && m == n) {
+            return;
+        }
+        if (flag) {
+            if (m - 5 > 0) {
+                pattern(n, m - 5, true);
+            } else {
+                pattern(n, m - 5, false);
+            }
+        }
+        else{
+                pattern(n, m + 5, false);
+            }
+        }
+
+    public static void main(String[] args) {
+        int n=16;
+        int m=n;
+        pattern(16,m,true);
+
+    }
+
+
+
+2Q)
+
+
+   public static int sum(int n,int m){
+        if(m==1){
+           return n*(n+1)/2;
+
+        }
+        int s=sum(n,m-1);
+        return s*(s+1)/2;
+
+    }
+    public static void main(String[] args) {
+        int ans=sum(3,2);
+        System.out.println(ans);
+    }
